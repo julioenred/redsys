@@ -20,7 +20,7 @@
     $redsys->setParameter("DS_MERCHANT_TRANSACTIONTYPE",$trans);
     $redsys->setParameter("DS_MERCHANT_TERMINAL", TERMINAL_DEV);
     $redsys->setParameter("DS_MERCHANT_MERCHANTURL",$url);
-    $redsys->setParameter("DS_MERCHANT_URLOK",$urlOKKO);     
+    $redsys->setParameter("DS_MERCHANT_URLOK", URL_RESPONSE);     
     $redsys->setParameter("DS_MERCHANT_URLKO",$urlOKKO);
     $redsys->setParameter("DS_MERCHANT_PAN", TARJETA_DEV);
     $redsys->setParameter("DS_MERCHANT_EXPIRYDATE", FECHA_DEV);
