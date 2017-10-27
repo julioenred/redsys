@@ -5,11 +5,11 @@ include 'config.php';
 
 $redsys = new RedsysAPI;
 
-if (!empty( $_POST ) ) 
+if (!empty( $_GET ) ) 
 {             
-    $version = $_POST["Ds_SignatureVersion"];
-    $datos = $_POST["Ds_MerchantParameters"];
-    $signatureRecibida = $_POST["Ds_Signature"];
+    $version = $_GET["Ds_SignatureVersion"];
+    $datos = $_GET["Ds_MerchantParameters"];
+    $signatureRecibida = $_GET["Ds_Signature"];
     
     $decodec = $redsys->decodeMerchantParameters($datos);    
     $kc = KEY_DEV;
