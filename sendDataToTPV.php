@@ -22,7 +22,7 @@
     $redsys->setParameter("DS_MERCHANT_MERCHANTURL",$url);
     $redsys->setParameter("DS_MERCHANT_URLOK", URL_RESPONSE);     
     $redsys->setParameter("DS_MERCHANT_URLKO", URL_ERROR);
-    $redsys->setParameter("DS_MERCHANT_PAN", TARJETA_DEV);
+    $redsys->setParameter("DS_MERCHANT_PAN", $_POST['card']);
     $redsys->setParameter("DS_MERCHANT_EXPIRYDATE", FECHA_DEV);
     $redsys->setParameter("DS_MERCHANT_CVV2", CVV2_DEV);
     
