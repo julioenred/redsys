@@ -49,7 +49,7 @@
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
     $remote_server_output = curl_exec ($ch);
 
-    var_dump($remote_server_output);
+    // var_dump($remote_server_output);
      
     // cerramos la sesión cURL
     curl_close ($ch);
