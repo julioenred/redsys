@@ -44,7 +44,7 @@
     curl_setopt($ch, CURLOPT_POSTFIELDS, "Ds_SignatureVersion=$version&Ds_MerchantParameters=$params&Ds_Signature=$signature");
      
     // recibimos la respuesta y la guardamos en una variable
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    // curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
     curl_exec ($ch);
      
     // cerramos la sesión cURL
