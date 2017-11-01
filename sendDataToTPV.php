@@ -40,9 +40,9 @@
 </head>
 <body>
     <form name="frm" action="<?php echo REQUEST_DEV ?>" method="POST">
-        Ds_Merchant_SignatureVersion <input type="text" name="Ds_SignatureVersion" value="<?php echo $version; ?>"/></br>
-        Ds_Merchant_MerchantParameters <input type="text" name="Ds_MerchantParameters" value="<?php echo $params; ?>"/></br>
-        Ds_Merchant_Signature <input type="text" name="Ds_Signature" value="<?php echo $signature; ?>"/></br>
+        <input type="hidden" name="Ds_SignatureVersion" value="<?php echo $version; ?>"/></br>
+        <input type="hidden" name="Ds_MerchantParameters" value="<?php echo $params; ?>"/></br>
+        <input type="hidden" name="Ds_Signature" value="<?php echo $signature; ?>"/></br>
     </form>
     <script>document.forms[0].submit();</script>
 </body>
