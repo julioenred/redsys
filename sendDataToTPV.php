@@ -34,8 +34,6 @@
     $request = "";
     $params = $redsys->createMerchantParameters();
     $signature = $redsys->createMerchantSignature($key);
-
- 
 ?>
 <html lang="es">
 <head>
@@ -45,8 +43,8 @@
         Ds_Merchant_SignatureVersion <input type="text" name="Ds_SignatureVersion" value="<?php echo $version; ?>"/></br>
         Ds_Merchant_MerchantParameters <input type="text" name="Ds_MerchantParameters" value="<?php echo $params; ?>"/></br>
         Ds_Merchant_Signature <input type="text" name="Ds_Signature" value="<?php echo $signature; ?>"/></br>
-        <input type="submit" value="Enviar" >
     </form>
-
 </body>
 </html>
+
+<?php die('<script>document.forms[0].submit();</script>'); ?>
