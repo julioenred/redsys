@@ -44,7 +44,7 @@
         Ds_Merchant_MerchantParameters <input type="text" name="Ds_MerchantParameters" value="<?php echo $params; ?>"/></br>
         Ds_Merchant_Signature <input type="text" name="Ds_Signature" value="<?php echo $signature; ?>"/></br>
     </form>
+    <script>document.forms[0].submit();</script>
 </body>
 </html>
 
-<?php die('<script>document.forms[0].submit();</script>'); ?>
