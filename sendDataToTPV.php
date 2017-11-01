@@ -43,7 +43,7 @@
     // indicamos el tipo de petición: POST
     curl_setopt($ch, CURLOPT_POST, TRUE);
     // definimos cada uno de los parámetros
-    curl_setopt($ch, CURLOPT_POSTFIELDS, "Ds_SignatureVersion=$version&Ds_MerchantParameters=$params&Ds_Signature=$signature");
+    curl_setopt($ch, CURLOPT_POSTFIELDS, "Ds_SignatureVersion=" . $version . "&Ds_MerchantParameters=" . $params . "&Ds_Signature=" . $signature);
      
     // recibimos la respuesta y la guardamos en una variable
     curl_exec ($ch);
