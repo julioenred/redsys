@@ -35,18 +35,16 @@
     $params = $redsys->createMerchantParameters();
     $signature = $redsys->createMerchantSignature($key);
 
- 
+    // abrimos la sesión cURL
+    $ch = curl_init();
+     
+    // definimos la URL a la que hacemos la petición
+    curl_setopt($ch, CURLOPT_URL, REQUEST_DEV);
+    // indicamos el tipo de petición: POST
+    curl_setopt($ch, CURLOPT_POST, TRUE);
+    // definimos cada uno de los parámetros
+    curl_setopt($ch, CURLOPT_POSTFIELDS, "Ds_SignatureVersion=$version&Ds_MerchantParameters=$params&Ds_Signature=$signature");
+    // cerramos la sesión cURL
+    curl_close ($ch);
 ?>
-<html lang="es">
-<head>
-</head>
-<body>
-    <form name="frm" action="<?php echo REQUEST_DEV ?>" method="POST" target="_blank">
-        Ds_Merchant_SignatureVersion <input type="text" name="Ds_SignatureVersion" value="<?php echo $version; ?>"/></br>
-        Ds_Merchant_MerchantParameters <input type="text" name="Ds_MerchantParameters" value="<?php echo $params; ?>"/></br>
-        Ds_Merchant_Signature <input type="text" name="Ds_Signature" value="<?php echo $signature; ?>"/></br>
-        <input type="submit" value="Enviar" >
-    </form>
 
-</body>
-</html>
