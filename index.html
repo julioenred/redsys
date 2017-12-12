@@ -2,26 +2,40 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cliente TPV</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <title>TPV</title>
 </head>
 <body>
-    <form method='POST' action='http://www.h2683468.stratoserver.net/public/events/redsys.json'>
-        <input type='hidden' value='[share]' name='tipo'>
-        <input type='hidden' value='19:00' name='horainicio'>
-        <input type='hidden' value='20:00' name='horafin'>
-        <input type='hidden' value='08-12-2017' name='fecha'>
-        <input type='hidden' value='julio' name='nombre'>
-        <input type='hidden' value='prueba' name='apellidos'>
-        <label>personas</label>
-        <input type='text' value='1' name='personas'>
-        <input type='hidden' value='yalach@gmail.com' name='email'>
-        <input type='hidden' value='60min' name='duracion'>
-        <input type='hidden' value='649637377' name='telefono'>
-        <input type='hidden' value='KARL' name='codigo'>
-        <label>Precio por persona</label>
-        <input type='text' value='1' name='pago'>
-        <input type='submit' value='Enviar'> 
-    </form>
+    <div class="container">    
+        <div id="loginbox" style="margin-top:50px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">                    
+            <div class="panel panel-info" >
+                <div class="panel-heading">
+                    <div class="panel-title">TPV <i class="glyphicon glyphicon-shopping-cart"></i></div> 
+                </div>  
+
+                <div style="padding-top:30px" class="panel-body" >
+                    <div style="display:none" id="login-alert" class="alert alert-danger col-sm-12"></div>
+                    <form id="loginform" class="form-horizontal" role="form" method='POST' action='http://www.h2683468.stratoserver.net/public/events/redsys.json'>               
+                        <div style="margin-bottom: 25px" class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                            <input id="login-username" type="text" class="form-control" name="personas" value="" placeholder="Número de personas">                                        
+                        </div>
+                            
+                        <div style="margin-bottom: 25px" class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-eur"></i></span>
+                            <input id="login-password" type="password" class="form-control" name="pago" placeholder="Precio por persona">
+                        </div>
+
+                        <div style="margin-top:10px" class="form-group">
+                            <div class="col-sm-12 controls">
+                              <input type='submit' class="btn btn-primary" value='Pagar'\>
+                            </div>
+                        </div>
+                    </form>    
+                </div>                     
+            </div>  
+        </div>
+    </div> 
 </body>
 </html>
