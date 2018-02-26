@@ -17,7 +17,12 @@
 
                 <div style="padding-top:30px" class="panel-body" >
                     <div style="display:none" id="login-alert" class="alert alert-danger col-sm-12"></div>
-                    <form id="loginform" class="form-horizontal" role="form" method='POST' action='http://www.h2683468.stratoserver.net/public/events/redsys.json'>               
+                    <form id="loginform" class="form-horizontal" role="form" method='POST' action='http://www.h2683468.stratoserver.net/public/events/redsys.json'> 
+                        <div style="margin-bottom: 25px" class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-comment"></i></span>
+                            <textarea id="login-username" class="form-control" name="comentarios" value="" placeholder="Comentarios"></textarea>                                        
+                        </div>
+
                         <div style="margin-bottom: 25px" class="input-group">
                             <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
                             <input id="login-username" type="text" class="form-control" name="personas" value="" placeholder="Número de personas">                                        
